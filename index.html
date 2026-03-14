@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title id="meta-title">
+      Corée Ô France | Korea–France Market Expansion Consulting
+    </title>
+    <meta
+      id="meta-desc"
+      name="description"
+      content="Corée Ô France는 한국과 프랑스 기업의 상호 시장 진출을 지원하는 전략 컨설팅 회사입니다."
+    />
+
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://www.coreeofrance.com/"
+    />
+    <link rel="canonical" href="https://www.coreeofrance.com/" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --text: #0f172a;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --container: 1100px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        color: var(--text);
+        background: #fff;
+      }
+
+      .container {
+        width: min(var(--container), calc(100% - 40px));
+        margin: auto;
+      }
+
+      section {
+        padding: 90px 0;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", serif;
+        margin: 0;
+      }
+
+      p {
+        line-height: 1.7;
+      }
+
+      /* NAV */
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        background: rgba(255, 255, 255, 0);
+        transition:
+          top 0.6s ease,
+          background 0.25s ease,
+          box-shadow 0.25s ease;
+        z-index: 100;
+      }
+
+      nav.scrolled {
+        background: #fff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      }
+
+      nav.hide-nav {
+        top: -90px;
+      }
+
+      .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      }
+
+      .logo a {
+        font-family: "Inter", sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        letter-spacing: -0.4px;
+        text-decoration: none;
+        color: var(--text);
+        display: flex;
+        align-items: center;
+        height: 70px;
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 28px;
+        font-size: 14px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text);
+        padding: 8px 0;
+        border-radius: 6px;
+        transition: all 0.2s ease;
+      }
+
+      /* language */
+
+      .lang-switch {
+        display: flex;
+        gap: 10px;
+      }
+
+      .lang-switch button {
+        background: none;
+        border: none;
+        font-size: 13px;
+        cursor: pointer;
+        color: var(--muted);
+      }
+
+      /* HERO */
+
+      .hero {
+        padding-top: 120px;
+        padding-bottom: 120px;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: 60px;
+        align-items: center;
+      }
+
+      @media (min-width: 900px) {
+        .hero-grid {
+          grid-template-columns: 1.2fr 0.8fr;
+        }
+      }
+
+      .hero h1 {
+        font-size: clamp(42px, 5vw, 70px);
+        line-height: 1.1;
+        max-width: 700px;
+      }
+
+      .hero p {
+        margin-top: 24px;
+        max-width: 520px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .hero-btn {
+        margin-top: 32px;
+        display: inline-block;
+        padding: 12px 22px;
+        border-radius: 40px;
+        border: 1px solid var(--text);
+        text-decoration: none;
+        color: var(--text);
+      }
+
+      .hero-image img {
+        width: 100%;
+        border-radius: 12px;
+      }
+
+      .hero-bg {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-bg::before {
+        content: "";
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        top: -200px;
+        right: -200px;
+
+        background: radial-gradient(
+          circle,
+          rgba(240, 240, 240, 0.9) 0%,
+          rgba(255, 255, 255, 0) 70%
+        );
+
+        z-index: -1;
+      }
+
+      .hero-bg::after {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        bottom: -200px;
+        left: -200px;
+
+        background: radial-gradient(
+          circle,
+          rgba(235, 235, 235, 0.8) 0%,
+          rgba(255, 255, 255, 0) 70%
+        );
+
+        z-index: -1;
+      }
+
+      /* animation */
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.35s ease;
+      }
+
+      .fade-up.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ABOUT */
+
+      .about-grid {
+        display: grid;
+        gap: 40px;
+      }
+
+      @media (min-width: 900px) {
+        .about-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .about h2 {
+        font-size: 40px;
+      }
+
+      .about p {
+        color: var(--muted);
+      }
+
+      .about {
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* ABOUT BACKGROUNG */
+      .about::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: url("image/korea-france-bridge.png") center/cover no-repeat;
+
+        opacity: 0.25;
+        filter: grayscale(100%);
+        z-index: 0;
+      }
+
+      .about::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+
+        background: rgba(255, 255, 255, 0.4);
+        z-index: 1;
+      }
+
+      .about .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      /* SERVICES */
+      .services-grid {
+        margin-top: 40px;
+        display: grid;
+        gap: 30px;
+      }
+
+      @media (min-width: 900px) {
+        .services-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      .service p {
+        color: var(--muted);
+      }
+
+      .section-soft {
+        background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+      }
+
+      /* SERVICES CARDS */
+      .services .service {
+        border: 1px solid var(--border);
+        padding: 28px;
+        border-radius: 12px;
+        background: white;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .services .service:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      /* INDUSTRY IMAGES */
+      .service img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 14px;
+        height: 180px;
+        object-fit: cover;
+      }
+
+      /* CTA */
+      .cta {
+        text-align: center;
+      }
+
+      .cta h2 {
+        font-size: 44px;
+      }
+
+      .cta p {
+        margin-top: 18px;
+        color: var(--muted);
+      }
+
+      .cta a {
+        display: inline-block;
+        margin-top: 26px;
+        padding: 14px 26px;
+        border-radius: 40px;
+        background: #111;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      /* FOOTER */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 40px 0;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      footer a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      footer a:hover {
+        color: #111;
+      }
+
+      /* MOBILE NAV */
+      .menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--text); /* 아이콘 색 */
+        -webkit-tap-highlight-color: transparent; /* 모바일 파란 효과 제거 */
+      }
+
+      /* mobile */
+      @media (max-width: 800px) {
+        .nav-links {
+          position: absolute;
+          top: 70px;
+          right: 0;
+          background: white;
+          width: 200px;
+          flex-direction: column;
+          padding: 20px;
+          gap: 18px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          display: none;
+        }
+
+        .nav-links.show {
+          display: flex;
+        }
+
+        .menu-btn {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="container nav-inner">
+        <div class="logo">
+          <a href="/">Corée Ô France</a>
+        </div>
+
+        <div class="nav-right">
+          <button class="menu-btn" onclick="toggleMenu()">☰</button>
+          <div class="nav-links" id="nav-links">
+            <a href="#about" data-ko="소개" data-en="About" data-fr="À propos"
+              >소개</a
+            >
+
+            <a
+              href="#services"
+              data-ko="서비스"
+              data-en="Services"
+              data-fr="Services"
+              >서비스</a
+            >
+
+            <a
+              href="#contact"
+              data-ko="문의"
+              data-en="Contact"
+              data-fr="Contact"
+              >문의</a
+            >
+          </div>
+
+          <div class="lang-switch">
+            <button onclick="setLang('ko')">KR</button>
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('fr')">FR</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero hero-bg">
+      <div class="container hero-grid">
+        <div class="hero-text fade-up">
+          <h1
+            data-ko="한국과 프랑스를 연결하는 시장 진출 전략 파트너"
+            data-en="Strategic Consulting for Korea–France Market Expansion"
+            data-fr="Conseil stratégique pour le développement des entreprises entre la Corée et la France"
+          >
+            한국과 프랑스를 연결하는 시장 진출 전략 파트너
+          </h1>
+
+          <p
+            data-ko="Corée Ô France는 한국과 프랑스 기업이 서로의 시장에 성공적으로 진출할 수 있도록 전략 컨설팅과 현지 파트너십을 지원합니다."
+            data-en="Corée Ô France supports Korean and French companies expanding into each other's markets through strategic consulting and local partnerships."
+            data-fr="Corée Ô France accompagne les entreprises coréennes et françaises dans leur expansion sur leurs marchés respectifs grâce à un conseil stratégique et à des partenariats locaux."
+          >
+            Corée Ô France는 한국과 프랑스 기업이 서로의 시장에 성공적으로
+            진출할 수 있도록 전략 컨설팅과 현지 파트너십을 지원합니다.
+          </p>
+
+          <a
+            class="hero-btn"
+            href="#contact"
+            data-ko="프로젝트 문의"
+            data-en="Start Your Expansion"
+            data-fr="Démarrer votre expansion"
+          >
+            프로젝트 문의
+          </a>
+        </div>
+
+        <div class="hero-image fade-up">
+          <img src="image/arche.png" alt="Paris" />
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div>
+          <h2
+            data-ko="한국과 프랑스를 연결하는 비즈니스 브릿지"
+            data-en="A Strategic Bridge Between Korea and France"
+            data-fr="Un pont stratégique entre la Corée et la France"
+          >
+            한국과 프랑스를 연결하는 비즈니스 브릿지
+          </h2>
+        </div>
+
+        <div>
+          <p
+            data-ko="Corée Ô France는 한국과 프랑스 기업의 상호 시장 진출을 지원하는 전략 컨설팅 플랫폼입니다."
+            data-en="Corée Ô France is a strategic consulting platform supporting Korean and French companies expanding into each other's markets."
+            data-fr="Corée Ô France est une plateforme de conseil stratégique accompagnant les entreprises coréennes et françaises dans leur développement sur leurs marchés respectifs."
+          >
+            Corée Ô France는 한국과 프랑스 기업의 상호 시장 진출을 지원하는 전략
+            컨설팅 플랫폼입니다.
+          </p>
+
+          <p
+            data-ko="시장 분석, 진출 전략 수립, 현지 파트너 연결, 브랜드 런칭 및 유통 네트워크 구축까지 기업의 한국과 프랑스 시장 확장을 위한 통합적인 지원을 제공합니다."
+            data-en="We provide integrated support from market research and strategy development to local partnerships, brand launch and distribution network development."
+            data-fr="Nous accompagnons les entreprises de l’analyse du marché à la stratégie d’entrée, en passant par les partenariats locaux et le lancement de marque."
+          >
+            시장 분석, 진출 전략 수립, 현지 파트너 연결, 브랜드 런칭 및 유통
+            네트워크 구축까지 기업의 한국과 프랑스 시장 확장을 위한 통합적인
+            지원을 제공합니다.
+          </p>
+
+          <p
+            data-ko="한국과 프랑스 양국의 문화와 비즈니스 환경에 대한 깊은 이해를 바탕으로 기업의 성공적인 시장 확장을 돕습니다."
+            data-en="With a deep understanding of both Korean and French business environments, we help companies successfully expand into new markets."
+            data-fr="Grâce à une compréhension approfondie des environnements économiques coréen et français, nous facilitons l’expansion internationale des entreprises."
+          >
+            한국과 프랑스 양국의 문화와 비즈니스 환경에 대한 깊은 이해를
+            바탕으로 기업의 성공적인 시장 확장을 돕습니다.
+          </p>
+
+          <div class="services-grid" style="margin-top: 60px">
+            <div class="service">
+              <h3
+                data-ko="25년 이상의 경험"
+                data-en="25+ Years of Experience"
+                data-fr="Plus de 25 ans d'expérience"
+              >
+                25년 이상의 경험
+              </h3>
+
+              <p
+                data-ko="25년 이상 한국과 프랑스 간 문화 및 비즈니스 협력 프로젝트 경험"
+                data-en="Over 25 years of cultural and business cooperation between Korea and France"
+                data-fr="Plus de 25 ans de coopération culturelle et économique entre la Corée et la France"
+              >
+                25년 이상 한불 협력 경험
+              </p>
+            </div>
+
+            <div class="service">
+              <h3
+                data-ko="유럽 비즈니스 네트워크"
+                data-en="European Network"
+                data-fr="Réseau européen"
+              >
+                유럽 비즈니스 네트워크
+              </h3>
+
+              <p
+                data-ko="프랑스 및 유럽 기업, 기관, 문화 네트워크와의 협력 관계"
+                data-en="Partnerships with companies, institutions and cultural networks across Europe"
+                data-fr="Partenariats avec des entreprises et institutions en France et en Europe"
+              >
+                유럽 비즈니스 네트워크
+              </p>
+            </div>
+
+            <div class="service">
+              <h3
+                data-ko="전략 컨설팅"
+                data-en="Strategic Consulting"
+                data-fr="Conseil stratégique"
+              >
+                전략 컨설팅
+              </h3>
+
+              <p
+                data-ko="한국 기업의 유럽 시장 진출을 위한 전략 컨설팅"
+                data-en="Strategic consulting for companies entering the European market"
+                data-fr="Conseil stratégique pour l'entrée sur le marché européen"
+              >
+                유럽 시장 전략 자문
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" class="services section-soft">
+      <div class="container">
+        <h2 data-ko="서비스" data-en="Services" data-fr="Services">서비스</h2>
+
+        <div class="services-grid">
+          <div class="service">
+            <h3
+              data-ko="시장 진출 전략"
+              data-en="Market Entry Strategy"
+              data-fr="Stratégie d'entrée sur le marché"
+            >
+              시장 진출 전략
+            </h3>
+
+            <p
+              data-ko="한국과 프랑스 시장의 구조, 경쟁 환경, 소비자 트렌드를 분석하여 기업에 맞는 시장 진출 전략을 수립합니다."
+              data-en="We analyze market structure, competitive landscape and consumer trends in Korea and France to develop tailored market entry strategies."
+              data-fr="Nous analysons la structure du marché, la concurrence et les tendances de consommation afin de définir des stratégies d'entrée adaptées."
+            >
+              한국과 프랑스 시장 분석 및 전략 수립
+            </p>
+          </div>
+
+          <div class="service">
+            <h3
+              data-ko="비즈니스 파트너십"
+              data-en="Business Partnerships"
+              data-fr="Partenariats commerciaux"
+            >
+              비즈니스 파트너십
+            </h3>
+
+            <p
+              data-ko="한국과 프랑스 기업, 유통사, 투자자 등 현지 파트너를 연결하여 새로운 비즈니스 협력 기회를 구축합니다."
+              data-en="We connect companies with local partners, distributors and investors in both Korea and France."
+              data-fr="Nous connectons les entreprises avec des partenaires, distributeurs et investisseurs en Corée et en France."
+            >
+              한국과 프랑스 기업 및 유통 파트너 연결
+            </p>
+          </div>
+
+          <div class="service">
+            <h3
+              data-ko="브랜드 런칭"
+              data-en="Brand Launch"
+              data-fr="Lancement de marque"
+            >
+              브랜드 런칭
+            </h3>
+
+            <p
+              data-ko="브랜드 포지셔닝과 마케팅 전략을 통해 한국과 프랑스 시장에서 성공적인 브랜드 런칭을 지원합니다."
+              data-en="We support successful brand launches through strategic positioning and marketing in both markets."
+              data-fr="Nous accompagnons le lancement de marques grâce à des stratégies de positionnement et de marketing adaptées aux deux marchés."
+            >
+              브랜드 런칭 및 마케팅 전략
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="industries">
+      <div class="container">
+        <h2
+          class="section-title"
+          data-ko="협력 분야"
+          data-en="Industries"
+          data-fr="Secteurs"
+        >
+          협력 분야
+        </h2>
+
+        <div style="margin-top: 60px">
+          <h3
+            data-ko="국제 박람회 및 산업 전시"
+            data-en="International Exhibitions · Trade Fairs"
+            data-fr="Salons et foires internationales"
+          >
+            International Exhibitions · Trade Fairs
+          </h3>
+
+          <p
+            style="margin-top: 12px; color: var(--muted); max-width: 700px"
+            data-ko="프랑스 및 유럽의 주요 국제 박람회와 산업 전시에 기업이 참가할 수 있도록 전략, 부스 기획, 현지 파트너 연결을 지원합니다."
+            data-en="Support for companies participating in international trade fairs and exhibitions across France and Europe."
+            data-fr="Accompagnement des entreprises dans les salons et foires internationales en France et en Europe."
+          >
+            국제 박람회 참가 전략 및 현지 파트너 연결
+          </p>
+
+          <div class="services-grid">
+            <div class="service">
+              <img src="image/trade.png" alt="Trade Fair" />
+              <h3
+                data-ko="국제 산업 박람회"
+                data-en="International Trade Fairs"
+                data-fr="Foires industrielles internationales"
+              >
+                International Trade Fairs
+              </h3>
+              <p
+                data-ko="유럽 주요 산업 박람회 참가 및 현지 네트워크 구축"
+                data-en="Participation in major European trade fairs"
+                data-fr="Participation aux grandes foires européennes"
+              >
+                국제 산업 박람회
+              </p>
+            </div>
+
+            <div class="service">
+              <img src="image/defense.jpg" alt="Defense Industry" />
+              <h3
+                data-ko="방산 산업 전시"
+                data-en="Defense Industry"
+                data-fr="Industrie de la défense"
+              >
+                Defense Industry
+              </h3>
+              <p
+                data-ko="방산 기업의 국제 방산 전시 참가 지원"
+                data-en="Support for defense companies participating in international defense exhibitions"
+                data-fr="Participation des entreprises de défense aux salons internationaux"
+              >
+                방산 산업 전시
+              </p>
+            </div>
+
+            <div class="service">
+              <img src="image/tech.jpg" alt="Technology Expo" />
+              <h3
+                data-ko="기술 · 혁신 산업"
+                data-en="Technology · Innovation"
+                data-fr="Technologie · Innovation"
+              >
+                Technology · Innovation
+              </h3>
+              <p
+                data-ko="첨단 기술 및 산업 혁신 전시 참가 지원"
+                data-en="Support for technology and innovation exhibitions"
+                data-fr="Participation aux salons technologiques"
+              >
+                기술 산업 전시
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 80px">
+          <h3
+            data-ko="소비재 브랜드 시장 진출"
+            data-en="Consumer Brands · Market Expansion"
+            data-fr="Marques et développement du marché"
+          >
+            Consumer Brands · Market Expansion
+          </h3>
+
+          <p
+            style="margin-top: 12px; color: var(--muted); max-width: 700px"
+            data-ko="한국 소비재 브랜드의 프랑스 및 유럽 시장 진출을 위해 유통, 파트너십, 브랜드 전략을 지원합니다."
+            data-en="Supporting Korean consumer brands entering the French and European markets through distribution networks, partnerships and brand strategy."
+            data-fr="Accompagnement des marques de consommation coréennes dans leur développement sur les marchés français et européens."
+          >
+            한국 소비재 브랜드의 유럽 시장 진출 지원
+          </p>
+
+          <div class="services-grid">
+            <div class="service">
+              <img src="image/food.png" alt="Korean Food" />
+              <h3
+                data-ko="식품 · 미식"
+                data-en="Food · Gastronomy"
+                data-fr="Gastronomie"
+              >
+                Food · Gastronomy
+              </h3>
+
+              <p
+                data-ko="한국 식품 브랜드의 프랑스 시장 진출 및 유통 네트워크 구축"
+                data-en="Supporting Korean food brands entering the French market"
+                data-fr="Accompagnement des marques alimentaires coréennes"
+              >
+                한국 식품 브랜드
+              </p>
+            </div>
+
+            <div class="service">
+              <img src="image/beauty.jpg" alt="K Beauty" />
+              <h3
+                data-ko="뷰티 · 화장품"
+                data-en="Beauty · Cosmetics"
+                data-fr="Beauté · Cosmétiques"
+              >
+                Beauty · Cosmetics
+              </h3>
+
+              <p
+                data-ko="K-Beauty 브랜드의 유럽 시장 확장 및 현지 파트너 연결"
+                data-en="Expansion strategies for K-Beauty brands entering the European market"
+                data-fr="Stratégies d’expansion pour les marques de beauté coréennes"
+              >
+                K-Beauty 브랜드
+              </p>
+            </div>
+
+            <div class="service">
+              <img src="image/luxury.jpg" alt="Luxury Fashion" />
+              <h3
+                data-ko="럭셔리 · 디자인"
+                data-en="Luxury · Design"
+                data-fr="Luxe · Design"
+              >
+                Luxury · Design
+              </h3>
+
+              <p
+                data-ko="패션, 디자인 및 라이프스타일 브랜드의 유럽 진출 지원"
+                data-en="European expansion support for fashion and design brands"
+                data-fr="Expansion européenne pour les marques de mode et de design"
+              >
+                패션 · 디자인 브랜드
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 80px">
+          <h3
+            data-ko="프라이빗 문화 경험"
+            data-en="Private Cultural Experiences"
+            data-fr="Expériences culturelles privées"
+          >
+            Private Cultural Experiences
+          </h3>
+
+          <p
+            style="margin-top: 12px; color: var(--muted); max-width: 700px"
+            data-ko="프랑스 문화 예술과 미식을 중심으로 한 맞춤형 프라이빗 여행 프로그램을 제공합니다."
+            data-en="Tailor-made cultural experiences across art, music and gastronomy"
+            data-fr="Expériences culturelles sur mesure autour de l’art, de la musique et de la gastronomie"
+          >
+            맞춤형 문화 경험 프로그램
+          </p>
+
+          <div class="services-grid">
+            <div class="service">
+              <img src="image/art.png" alt="Art Museums" />
+
+              <h3
+                data-ko="당신만을 위한 맞춤형 전시 투어"
+                data-en="Exclusive Exhibition Tours Tailored Just for You"
+                data-fr="Visites privées d’expositions sur mesure"
+              >
+                Exclusive Exhibition Tours Tailored Just for You
+              </h3>
+
+              <p
+                data-ko="프랑스 주요 미술관 및 국제 아트페어 VIP 관람"
+                data-en="VIP Access to Major Museums and International Art Fairs"
+                data-fr="Accès VIP aux grands musées et aux foires d’art internationales"
+              >
+                프라이빗 맞춤 전시 투어
+              </p>
+            </div>
+
+            <div class="service">
+              <img src="image/opera.jpg" alt="Opera and Music" />
+
+              <h3
+                data-ko="당신만을 위한 음악 · 오페라"
+                data-en="Music · Opera Just for You"
+                data-fr="Musique · Opéra rien que pour vous"
+              >
+                Music · Opera Just for You
+              </h3>
+
+              <p
+                data-ko="유럽 주요 클래식 공연 VIP 관람 – 유럽 최고의 클래식 콘서트에서 프리미엄 좌석과 특별한 관람 혜택 제공"
+                data-en="European Concert VIP Access – Premium seating and privileges at top European classical music concerts"
+                data-fr="Accès VIP aux concerts en Europe – Places premium et privilèges pour les plus grands concerts de musique classique en Europe"
+              >
+                프라이빗 음악 · 오페라 경험
+              </p>
+            </div>
+
+            <div class="service">
+              <img src="image/gastronomy.jpg" alt="Gastronomy" />
+
+              <h3
+                data-ko="당신만을 위한 프랑스 미식 투어"
+                data-en="French Gastronomy Tours Just for You"
+                data-fr="Tours gastronomiques en France rien que pour vous"
+              >
+                French Gastronomy Tours Just for You
+              </h3>
+
+              <p
+                data-ko="프랑스 전역의 미슐랭 1~3스타 레스토랑 미식 경험"
+                data-en="From one- to three-star restaurants in the Michelin Guide across France"
+                data-fr="Expériences culinaires dans les restaurants 1 à 3 étoiles du Guide Michelin à travers la France"
+              >
+                프랑스 미식 프라이빗 투어
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="cta">
+      <div class="container">
+        <h2
+          data-ko="한국 또는 프랑스 시장 진출을 준비하고 계신가요?"
+          data-en="Ready to Expand Between Korea and France?"
+          data-fr="Prêt à développer votre activité entre la Corée et la France ?"
+        >
+          한국 또는 프랑스 시장 진출을 준비하고 계신가요?
+        </h2>
+
+        <p
+          data-ko="Corée Ô France가 시장 전략부터 현지 파트너십 구축까지 함께합니다."
+          data-en="Corée Ô France supports your expansion from strategy development to local partnerships."
+          data-fr="Corée Ô France vous accompagne de la stratégie aux partenariats locaux."
+        >
+          Corée Ô France가 시장 전략부터 현지 파트너십 구축까지 함께합니다.
+        </p>
+
+        <a href="/contact/index.html">Contact →</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© 2026 Corée Ô France. All rights reserved.</div>
+
+        <div style="display: flex; gap: 10px">
+          <a
+            href="/legal"
+            data-i18n
+            data-ko="법적 고지"
+            data-en="Legal Notice"
+            data-fr="Mentions légales"
+            >Legal Notice</a
+          >
+
+          <span> | </span>
+
+          <a
+            href="/privacy"
+            data-i18n
+            data-ko="개인정보"
+            data-en="Privacy"
+            data-fr="Confidentialité"
+            >Privacy</a
+          >
+
+          <span> | </span>
+
+          <a
+            href="/terms"
+            data-i18n
+            data-ko="이용약관"
+            data-en="Terms"
+            data-fr="Conditions"
+            >Terms</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      /* language */
+      function setLang(lang) {
+        document.querySelectorAll("[data-ko]").forEach((el) => {
+          el.textContent = el.dataset[lang];
+        });
+
+        /* META TITLE */
+        const titles = {
+          ko: "Corée Ô France | 한-불 기업 시장 진출 전략 컨설팅",
+          en: "Corée Ô France | Strategic Consulting for Korea–France Market Expansion",
+          fr: "Corée Ô France | Conseil stratégique pour le développement entre la Corée et la France",
+        };
+
+        /* META DESCRIPTION */
+        const descriptions = {
+          ko: "Corée Ô France는 한국과 프랑스 기업의 상호 시장 진출을 지원하는 전략 컨설팅 회사입니다.",
+          en: "Corée Ô France supports Korean and French companies expanding into each other's markets through strategic consulting and local partnerships.",
+          fr: "Corée Ô France accompagne les entreprises coréennes et françaises dans leur expansion mutuelle entre les marchés coréen et français.",
+        };
+
+        document.title = titles[lang];
+
+        document
+          .getElementById("meta-desc")
+          .setAttribute("content", descriptions[lang]);
+
+        localStorage.setItem("lang", lang);
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const savedLang = localStorage.getItem("lang") || "ko";
+        setLang(savedLang);
+      });
+
+      /* hero animation */
+      window.addEventListener("load", () => {
+        document.querySelectorAll(".fade-up").forEach((el) => {
+          setTimeout(() => {
+            el.classList.add("show");
+          }, 80);
+        });
+      });
+
+      /* nav scroll */
+      let lastScrollTop = 0;
+      const navbar = document.querySelector("nav");
+
+      window.addEventListener("scroll", () => {
+        const currentScroll =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (currentScroll > lastScrollTop && currentScroll > 60) {
+          navbar.classList.add("hide-nav");
+          navbar.classList.remove("scrolled");
+        } else if (currentScroll < lastScrollTop && currentScroll > 60) {
+          navbar.classList.remove("hide-nav");
+          navbar.classList.add("scrolled");
+        } else if (currentScroll <= 60) {
+          navbar.classList.remove("scrolled");
+        }
+
+        lastScrollTop = Math.max(currentScroll, 0);
+      });
+
+      function toggleMenu() {
+        const menu = document.getElementById("nav-links");
+        menu.classList.toggle("show");
+      }
+
+      document.querySelectorAll("#nav-links a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.getElementById("nav-links").classList.remove("show");
+        });
+      });
+    </script>
+  </body>
+</html>

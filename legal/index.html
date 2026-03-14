@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Legal Notice | Corée O France</title>
+
+    <meta name="robots" content="noindex" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --text: #0f172a;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --container: 1100px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, system-ui;
+        color: var(--text);
+      }
+
+      .container {
+        width: min(var(--container), calc(100% - 40px));
+        margin: auto;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        transition: background 0.25s ease;
+        z-index: 100;
+      }
+
+      .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      }
+
+      .logo a {
+        font-size: 21px;
+        font-weight: 600;
+        text-decoration: none;
+        color: var(--text);
+      }
+
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .lang-switch {
+        display: flex;
+        gap: 10px;
+      }
+
+      .lang-switch button {
+        background: none;
+        border: none;
+        font-size: 13px;
+        cursor: pointer;
+        color: var(--muted);
+      }
+
+      main {
+        max-width: 900px;
+        margin: 120px auto 80px auto;
+        padding: 0 20px;
+        line-height: 1.7;
+      }
+
+      h1 {
+        font-family:
+          Playfair Display,
+          serif;
+        margin-bottom: 40px;
+      }
+
+      h2 {
+        margin-top: 40px;
+      }
+
+      p {
+        color: #555;
+      }
+
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 40px 0;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      footer a {
+        color: var(--muted);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="container nav-inner">
+        <div class="logo">
+          <a href="/">Corée O France</a>
+        </div>
+
+        <div class="nav-right">
+          <div class="lang-switch">
+            <button onclick="setLang('ko')">KR</button>
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('fr')">FR</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <h1 data-en="Legal Notice" data-ko="법적 고지" data-fr="Mentions légales">
+        Legal Notice
+      </h1>
+
+      <h2
+        data-en="Website Publisher"
+        data-ko="웹사이트 운영자"
+        data-fr="Éditeur du site"
+      >
+        Website Publisher
+      </h2>
+
+      <p>Corée O France</p>
+
+      <p
+        data-en="Corée O France is responsible for the publication and management of this website."
+        data-ko="Corée O France는 본 웹사이트의 운영 및 관리 책임을 갖습니다."
+        data-fr="Corée O France est responsable de la publication et de la gestion du présent site."
+      >
+        Corée O France is responsible for the publication and management of this
+        website.
+      </p>
+
+      <h2
+        data-en="Company Information"
+        data-ko="회사 정보"
+        data-fr="Informations sur la société"
+      >
+        Company Information
+      </h2>
+
+      <p>Corée O France</p>
+
+      <p
+        data-en="Based in Paris, France."
+        data-ko="프랑스 파리를 기반으로 운영됩니다."
+        data-fr="Basé à Paris, France."
+      >
+        Based in Paris, France.
+      </p>
+
+      <h2
+        data-en="Publication Director"
+        data-ko="출판 책임자"
+        data-fr="Directeur de la publication"
+      >
+        Publication Director
+      </h2>
+
+      <p
+        data-en="The publication director of this website is Corée O France."
+        data-ko="본 웹사이트의 출판 책임자는 Corée O France입니다."
+        data-fr="Le directeur de la publication du site est Corée O France."
+      >
+        The publication director of this website is Corée O France.
+      </p>
+
+      <h2 data-en="Hosting" data-ko="호스팅" data-fr="Hébergement">Hosting</h2>
+
+      <p
+        data-en="This website is hosted by its respective hosting provider."
+        data-ko="본 웹사이트는 해당 호스팅 서비스 제공업체를 통해 운영됩니다."
+        data-fr="Ce site est hébergé par son fournisseur d’hébergement."
+      >
+        This website is hosted by its respective hosting provider.
+      </p>
+
+      <h2
+        data-en="Intellectual Property"
+        data-ko="지적 재산권"
+        data-fr="Propriété intellectuelle"
+      >
+        Intellectual Property
+      </h2>
+
+      <p
+        data-en="All content on this website, including text, images, graphics and design elements, is the intellectual property of Corée O France unless otherwise stated."
+        data-ko="본 웹사이트에 포함된 텍스트, 이미지, 그래픽 및 디자인 요소는 별도의 명시가 없는 한 Corée O France의 지적 재산입니다."
+        data-fr="L’ensemble des contenus présents sur ce site (textes, images, graphismes, éléments de design) est la propriété intellectuelle de Corée O France sauf mention contraire."
+      >
+        All content on this website is the intellectual property of Corée O
+        France unless otherwise stated.
+      </p>
+
+      <h2 data-en="Liability" data-ko="책임 제한" data-fr="Responsabilité">
+        Liability
+      </h2>
+
+      <p
+        data-en="Corée O France strives to ensure the accuracy of the information published on this website. However, it cannot guarantee that all information is complete or up to date."
+        data-ko="Corée O France는 본 웹사이트에 게시된 정보의 정확성을 위해 노력하지만 모든 정보의 완전성이나 최신성을 보장하지는 않습니다."
+        data-fr="Corée O France s’efforce d’assurer l’exactitude des informations publiées sur ce site mais ne peut garantir leur exhaustivité ou leur mise à jour."
+      >
+        Corée O France strives to ensure the accuracy of the information
+        published on this website.
+      </p>
+
+      <h2 data-en="Contact" data-ko="문의" data-fr="Contact">Contact</h2>
+
+      <p>Email: contact@coreeofrance.com</p>
+
+      <p
+        style="margin-top: 40px; color: #6b7280; font-size: 14px"
+        data-en="Effective date: March 1, 2026"
+        data-ko="시행일: 2026년 3월 1일"
+        data-fr="Date d'entrée en vigueur : 1 mars 2026"
+      >
+        Effective date: March 1, 2026
+      </p>
+
+      <p
+        style="color: #6b7280; font-size: 14px"
+        data-en="Last updated: March 2026"
+        data-ko="최종 업데이트: 2026년 3월"
+        data-fr="Dernière mise à jour : mars 2026"
+      >
+        Last updated: March 2026
+      </p>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>© 2026 Corée O France. All rights reserved.</div>
+
+         <div style="display: flex; gap: 10px">
+          <a
+            href="/legal"
+            data-i18n
+            data-ko="법적 고지"
+            data-en="Legal Notice"
+            data-fr="Mentions légales"
+            >Legal Notice</a
+          >
+
+          <span> | </span>
+
+          <a
+            href="/privacy"
+            data-i18n
+            data-ko="개인정보"
+            data-en="Privacy"
+            data-fr="Confidentialité"
+            >Privacy</a
+          >
+
+          <span> | </span>
+
+          <a
+            href="/terms"
+            data-i18n
+            data-ko="이용약관"
+            data-en="Terms"
+            data-fr="Conditions"
+            >Terms</a
+          >
+      </div>
+    </footer>
+
+    <script>
+      function setLang(lang) {
+        document.querySelectorAll("[data-en]").forEach((el) => {
+          el.textContent = el.dataset[lang];
+        });
+
+        localStorage.setItem("lang", lang);
+      }
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const savedLang = localStorage.getItem("lang") || "en";
+        setLang(savedLang);
+      });
+    </script>
+  </body>
+</html>
